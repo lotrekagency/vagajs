@@ -1,0 +1,58 @@
+
+@mixin animationsBundle {
+  &.loaded {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+  &.anim-slow {
+    &-1 {
+      transition-delay: .25s;
+    }
+    &-2 {
+      transition-delay: .5s;
+    }
+    &-3 {
+      transition-delay: .75s;
+    }
+    &-4 {
+      transition-delay: 1s;
+    }
+  }
+}
+
+@mixin fadeIn {
+  transition: opacity ease-in .375s, transform ease-in .375s;
+  opacity: 0;
+  transform: translateY(40px);
+  @include animationsBundle;
+  @media (max-width:$mobile) {
+    transform: translateY(20px);
+  }
+}
+@mixin fadeOut {
+  transition: opacity ease-in .375s, transform ease-in .375s;
+  opacity: 0;
+  transform: translateY(-40px);
+  @include animationsBundle;
+  @media (max-width:$mobile) {
+    transform: translateY(-20px);
+  }
+}
+@mixin fadeLeft {
+  transition: opacity ease-in .375s, transform ease-in .375s;
+  opacity: 0;
+  transform: translateX(-40px);
+  @include animationsBundle;
+  @media (max-width:$mobile) {
+    transform: translateX(-20px);
+  }
+}
+@mixin fadeRight {
+  transition: opacity ease-in .375s, transform ease-in .375s;
+  opacity: 0;
+  transform: translateX(40px);
+  @include animationsBundle;
+  @media (max-width:$mobile) {
+    transform: translateX(20px);
+  }
+}

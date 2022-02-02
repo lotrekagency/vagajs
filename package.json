@@ -37,7 +37,6 @@
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "sass-loader": "^7.1.0",
     "sinon": "^8.1.0",
-    "size-plugin": "^1.1.2",
     "terser-webpack-plugin": "^1.2.3",
     "webpack": "^4.29.0",
     "webpack-bundle-analyzer": "^3.0.3",
