@@ -1,8 +1,10 @@
 
-@mixin animationsBundle {
+@mixin animationsBundle($transform: false) {
   &.loaded {
     opacity: 1;
-    transform: translateZ(0);
+    @if $transform {
+      transform: translateZ(0);
+    }
   }
   &.anim-slow {
     &-1 {
@@ -24,7 +26,7 @@
   transition: opacity ease-in .375s, transform ease-in .375s;
   opacity: 0;
   transform: translateY(40px);
-  @include animationsBundle;
+  @include animationsBundle($transform: true);
   @media (max-width:$mobile) {
     transform: translateY(20px);
   }
@@ -33,7 +35,7 @@
   transition: opacity ease-in .375s, transform ease-in .375s;
   opacity: 0;
   transform: translateY(-40px);
-  @include animationsBundle;
+  @include animationsBundle($transform: true);
   @media (max-width:$mobile) {
     transform: translateY(-20px);
   }
@@ -42,7 +44,7 @@
   transition: opacity ease-in .375s, transform ease-in .375s;
   opacity: 0;
   transform: translateX(-40px);
-  @include animationsBundle;
+  @include animationsBundle($transform: true);
   @media (max-width:$mobile) {
     transform: translateX(-20px);
   }
@@ -51,8 +53,14 @@
   transition: opacity ease-in .375s, transform ease-in .375s;
   opacity: 0;
   transform: translateX(40px);
-  @include animationsBundle;
+  @include animationsBundle($transform: true);
   @media (max-width:$mobile) {
     transform: translateX(20px);
   }
+}
+
+@mixin opacity {
+  transition: opacity ease-in .375s;
+  opacity: 0;
+  @include animationsBundle($transform: false);
 }
