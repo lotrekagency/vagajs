@@ -1,7 +1,9 @@
 
-@mixin animationsBundle($transform: false) {
+@mixin animationsBundle($opacity: false, $transform: false) {
   &.loaded {
-    opacity: 1;
+    @if $opacity {
+      opacity: 1;
+    }
     @if $transform {
       transform: translateZ(0);
     }
@@ -22,11 +24,12 @@
   }
 }
 
+// Fades
 @mixin fadeIn {
   transition: opacity ease-in .375s, transform ease-in .375s;
   opacity: 0;
   transform: translateY(40px);
-  @include animationsBundle($transform: true);
+  @include animationsBundle($opacity: true, $transform: true);
   @media (max-width:$mobile) {
     transform: translateY(20px);
   }
@@ -35,7 +38,7 @@
   transition: opacity ease-in .375s, transform ease-in .375s;
   opacity: 0;
   transform: translateY(-40px);
-  @include animationsBundle($transform: true);
+  @include animationsBundle($opacity: true, $transform: true);
   @media (max-width:$mobile) {
     transform: translateY(-20px);
   }
@@ -44,7 +47,7 @@
   transition: opacity ease-in .375s, transform ease-in .375s;
   opacity: 0;
   transform: translateX(-40px);
-  @include animationsBundle($transform: true);
+  @include animationsBundle($opacity: true, $transform: true);
   @media (max-width:$mobile) {
     transform: translateX(-20px);
   }
@@ -53,14 +56,49 @@
   transition: opacity ease-in .375s, transform ease-in .375s;
   opacity: 0;
   transform: translateX(40px);
-  @include animationsBundle($transform: true);
+  @include animationsBundle($opacity: true, $transform: true);
   @media (max-width:$mobile) {
     transform: translateX(20px);
   }
 }
 
+// Opacity
 @mixin opacity {
   transition: opacity ease-in .375s;
   opacity: 0;
-  @include animationsBundle($transform: false);
+  @include animationsBundle($opacity: true, $transform: false);
+}
+
+// Move
+@mixin moveIn {
+  transition: transform ease-in .375s;
+  transform: translateY(40px);
+  @include animationsBundle($opacity: false, $transform: true);
+  @media (max-width:$mobile) {
+    transform: translateY(20px);
+  }
+}
+@mixin moveOut {
+  transition: transform ease-in .375s;
+  transform: translateY(-40px);
+  @include animationsBundle($opacity: false, $transform: true);
+  @media (max-width:$mobile) {
+    transform: translateY(-20px);
+  }
+}
+@mixin moveLeft {
+  transition: transform ease-in .375s;
+  transform: translateX(-40px);
+  @include animationsBundle($opacity: false, $transform: true);
+  @media (max-width:$mobile) {
+    transform: translateX(-20px);
+  }
+}
+@mixin moveRight {
+  transition: transform ease-in .375s;
+  transform: translateX(40px);
+  @include animationsBundle($opacity: false, $transform: true);
+  @media (max-width:$mobile) {
+    transform: translateX(20px);
+  }
 }
