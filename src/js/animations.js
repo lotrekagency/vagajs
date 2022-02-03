@@ -1,13 +1,5 @@
 export const optionsFade = {
   root: null,
   rootMargin: '0px',
-  targets: document.querySelectorAll("[class*='fade-'"),
+  targets: document.querySelectorAll("[class*='vaga-'"),
 };
-
-/*
-  export const optionsFade = {
-    root: null,
-    rootMargin: '0px',
-    targets: document.querySelectorAll("[class*='vaga-'"),
-  };
-*/

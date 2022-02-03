@@ -1,4 +1,5 @@
-.fade-in {
+// fades
+.vaga-fade-in {
   @include fadeIn;
   &--md {
     @media (min-width:$tablet) {
@@ -11,7 +12,7 @@
     }
   }
 }
-.fade-out {
+.vaga-fade-out {
   @include fadeOut;
   &--md {
     @media (min-width:$tablet) {
@@ -24,7 +25,7 @@
     }
   }
 }
-.fade-left {
+.vaga-fade-left {
   @include fadeLeft;
   &--md {
     @media (min-width:$tablet) {
@@ -37,7 +38,7 @@
     }
   }
 }
-.fade-right {
+.vaga-fade-right {
   @include fadeRight;
   &--md {
     @media (min-width:$tablet) {
@@ -47,6 +48,75 @@
   &--lg {
     @media (min-width:$desktop) {
       @include fadeRight;
+    }
+  }
+}
+
+// opacity
+.vaga-opacity {
+  @include opacity;
+  &--md {
+    @media (min-width:$tablet) {
+      @include opacity;
+    }
+  }
+  &--lg {
+    @media (min-width:$desktop) {
+      @include opacity;
+    }
+  }
+}
+
+// Move
+.vaga-move-in {
+  @include moveIn;
+  &--md {
+    @media (min-width:$tablet) {
+      @include moveIn;
+    }
+  }
+  &--lg {
+    @media (min-width:$desktop) {
+      @include moveIn;
+    }
+  }
+}
+.vaga-move-out {
+  @include moveOut;
+  &--md {
+    @media (min-width:$tablet) {
+      @include moveOut;
+    }
+  }
+  &--lg {
+    @media (min-width:$desktop) {
+      @include moveOut;
+    }
+  }
+}
+.vaga-move-left {
+  @include moveLeft;
+  &--md {
+    @media (min-width:$tablet) {
+      @include moveLeft;
+    }
+  }
+  &--lg {
+    @media (min-width:$desktop) {
+      @include moveLeft;
+    }
+  }
+}
+.vaga-move-right {
+  @include moveRight;
+  &--md {
+    @media (min-width:$tablet) {
+      @include moveRight;
+    }
+  }
+  &--lg {
+    @media (min-width:$desktop) {
+      @include moveRight;
     }
   }
 }
