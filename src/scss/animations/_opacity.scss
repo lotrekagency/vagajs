@@ -1,0 +1,14 @@
+// opacity
+.vaga-opacity {
+  @include opacity;
+  &--md {
+    @media (min-width:$tablet) {
+      @include opacity;
+    }
+  }
+  &--lg {
+    @media (min-width:$desktop) {
+      @include opacity;
+    }
+  }
+}

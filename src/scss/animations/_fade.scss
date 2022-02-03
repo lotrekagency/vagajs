@@ -1,0 +1,53 @@
+// fades
+.vaga-fade-in {
+  @include fadeIn;
+  &--md {
+    @media (min-width:$tablet) {
+      @include fadeIn;
+    }
+  }
+  &--lg {
+    @media (min-width:$desktop) {
+      @include fadeIn;
+    }
+  }
+}
+.vaga-fade-out {
+  @include fadeOut;
+  &--md {
+    @media (min-width:$tablet) {
+      @include fadeOut;
+    }
+  }
+  &--lg {
+    @media (min-width:$desktop) {
+      @include fadeOut;
+    }
+  }
+}
+.vaga-fade-left {
+  @include fadeLeft;
+  &--md {
+    @media (min-width:$tablet) {
+      @include fadeLeft;
+    }
+  }
+  &--lg {
+    @media (min-width:$desktop) {
+      @include fadeLeft;
+    }
+  }
+}
+.vaga-fade-right {
+  @include fadeRight;
+  &--md {
+    @media (min-width:$tablet) {
+      @include fadeRight;
+    }
+  }
+  &--lg {
+    @media (min-width:$desktop) {
+      @include fadeRight;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+// Move
+.vaga-move-in {
+  @include moveIn;
+  &--md {
+    @media (min-width:$tablet) {
+      @include moveIn;
+    }
+  }
+  &--lg {
+    @media (min-width:$desktop) {
+      @include moveIn;
+    }
+  }
+}
+.vaga-move-out {
+  @include moveOut;
+  &--md {
+    @media (min-width:$tablet) {
+      @include moveOut;
+    }
+  }
+  &--lg {
+    @media (min-width:$desktop) {
+      @include moveOut;
+    }
+  }
+}
+.vaga-move-left {
+  @include moveLeft;
+  &--md {
+    @media (min-width:$tablet) {
+      @include moveLeft;
+    }
+  }
+  &--lg {
+    @media (min-width:$desktop) {
+      @include moveLeft;
+    }
+  }
+}
+.vaga-move-right {
+  @include moveRight;
+  &--md {
+    @media (min-width:$tablet) {
+      @include moveRight;
+    }
+  }
+  &--lg {
+    @media (min-width:$desktop) {
+      @include moveRight;
+    }
+  }
+}
