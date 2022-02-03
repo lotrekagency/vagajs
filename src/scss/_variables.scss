@@ -2,3 +2,8 @@
 $mobile:        767px;  //sm
 $tablet:        992px;  //md
 $desktop:       1400px; //lg
+
+// Custom properties
+:root {
+  --duration: 0.375s;
+}

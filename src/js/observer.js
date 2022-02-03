@@ -1,19 +1,24 @@
-export function observingScroll({root, rootMargin, targets, threshold}) {
-  const options = {root, rootMargin, threshold, targets};
-  const optionAux = {
+export function observingScroll(customOptions) {
+  
+  const observerOptions = {
     root: options.root,
     rootMargin: options.rootMargin,
-    threshold: threshold
+    threshold: options.threshold
   };
+
   let observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        //callback
-        entry.target.classList.add('loaded');
+        //callback - empty for now
       }
     });
-  },optionAux);
-  options.targets.forEach(item => {
+  },observerOptions);
+
+  customOptions.targets.forEach(item => {
     observer.observe(item);
   });
+
+  if(customOptions.duration !== undefined) {
+    document.documentElement.style.setProperty("--duration", customOptions.duration + "s")
+  }
 }
