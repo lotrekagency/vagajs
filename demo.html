@@ -27,7 +27,13 @@
 
   <script defer>
     console.log(vaga)
-    vaga.start()
+
+    var options = {
+      rootMargin: '20px',
+      threshold: 0.65,
+    };
+
+    vaga.start(options)
   </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-export function observingScroll({root, rootMargin, targets},threshold) {
+export function observingScroll({root, rootMargin, targets, threshold}) {
   const options = {root, rootMargin, threshold, targets};
   const optionAux = {
     root: options.root,

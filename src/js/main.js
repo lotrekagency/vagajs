@@ -1,19 +1,19 @@
-import {optionsFade} from './animations.js';
+import {options} from './animations.js';
 import {observingScroll} from './observer.js';
 import styles from './../scss/main.scss';
 
-export function start (threshold = 0.25) {
-  observingScroll(optionsFade,threshold);
-}
+export function start (customOptions) {
 
-/*
-  export function start (threshold = 0.25, oggettoOpzioniNonObbligatorio) {
-    if(oggettoOpzioniNonObbligatorio |== null) {
-      opzioni = oggettoOpzioniNonObbligatorio
-    } else {
-      opzioni = optionsFade
-    }
-    
-    observingScroll(optionsFade,threshold);
+  if(customOptions !== undefined) {
+    const finalOptions = Object.assign(options, customOptions);
+
+    console.log(finalOptions)
+
+    observingScroll(finalOptions);
+  } else {
+
+    console.log(options)
+
+    observingScroll(options);
   }
-*/
+}
