@@ -9,7 +9,8 @@ export function observingScroll(customOptions) {
   let observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        //callback - empty for now
+        //callback
+        entry.target.classList.add('loaded');
       }
     });
   },observerOptions);
@@ -20,5 +21,9 @@ export function observingScroll(customOptions) {
 
   if(customOptions.duration !== undefined) {
     document.documentElement.style.setProperty("--duration", customOptions.duration + "s")
+  }
+
+  if(customOptions.timingFunction !== undefined) {
+    document.documentElement.style.setProperty("--timing-function", customOptions.timingFunction)
   }
 }
