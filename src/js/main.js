@@ -1,6 +1,6 @@
 import {options} from './animations.js';
 import {observingScroll} from './observer.js';
-import styles from './../scss/main.scss';
+import styles from './../scss/vaga.scss';
 
 export function start (customOptions) {
 
