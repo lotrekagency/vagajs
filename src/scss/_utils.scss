@@ -2,4 +2,18 @@
   &-will {
     will-change: transform;
   }
+  &-delay {
+    &-1 {
+      transition-delay: calc(var(--duration) / 2);
+    }
+    &-2 {
+      transition-delay: var(--duration);
+    }
+    &-3 {
+      transition-delay: calc(var(--duration) * 1.5);
+    }
+    &-4 {
+      transition-delay: calc(var(--duration) * 2);
+    }
+  }
 }

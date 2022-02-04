@@ -8,20 +8,6 @@
       transform: translateZ(0);
     }
   }
-  &.anim-slow {
-    &-1 {
-      transition-delay: .25s;
-    }
-    &-2 {
-      transition-delay: .5s;
-    }
-    &-3 {
-      transition-delay: .75s;
-    }
-    &-4 {
-      transition-delay: 1s;
-    }
-  }
 }
 
 // Fades
