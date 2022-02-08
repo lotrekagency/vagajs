@@ -1,6 +1,6 @@
 {
   "name": "vagajs",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "An immediate animation library using CSS class names for plug & play transitions.",
   "main": "dist/vaga.js",
   "repository": "vagajs",
