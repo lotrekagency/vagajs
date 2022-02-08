@@ -19,6 +19,8 @@ An immediate animation library using CSS class names for plug &amp; play transit
 
 [Copyright and license](#copyright-and-license)
 
+[TODO](#todo)
+
 
 ### Getting started
 
@@ -87,7 +89,7 @@ Want to have a fade-in on an element when it's viewed in a mobile device and the
 
 These responsive util classes are mobile-first and work as follow:
 
-`.vaga-<property>-<duration>--<breakpoint>`
+`.vaga-<property>-<direction>--<breakpoint>`
 
 Breakpoints are *md* (min-width: 992px) and *lg* (min-width: 1400px), here's another example:
 
@@ -159,3 +161,7 @@ VagaJS works on the latest versions of Chrome, Firefox, Edge and Safari.
 ### Copyright and license
 
 lotrekagency/vagajs is licensed under the MIT License.
+
+### TODO
+
+Module to make it work on nuxtjs
