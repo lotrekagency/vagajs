@@ -1,8 +1,8 @@
 {
   "name": "vagajs",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "An immediate animation library using CSS class names for plug & play transitions.",
-  "main": "dist/vaga.js",
+  "main": "src/main.js",
   "repository": "vagajs",
   "author": "Andrea Morosi",
   "license": "MIT",
