@@ -6,6 +6,7 @@ export function start (customOptions) {
 
   window.addEventListener('load', function () {
     if(document.querySelector('.vaga-block')) {
+      console.log('once')
       document.querySelector('.vaga-block').classList.remove('vaga-block')
     }
 
