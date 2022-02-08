@@ -16,4 +16,7 @@
       transition-delay: calc(var(--duration) * 2);
     }
   }
+  &-block * {
+    transition: none !important;
+  }
 }

@@ -114,6 +114,8 @@ This util will apply a delay based on its value, where the values are *1*, *2*, 
 
 `.vaga-will` - applies will-change: transform; for smoother animations, [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/will-change).
 
+`.vaga-block` - trick to have smooth animations and transitions only when the window is loaded, add this to the parent/grandparent element such as the body.
+
 
 ### Built with and how does it work
 

@@ -10,4 +10,10 @@ export function start (customOptions) {
   } else {
     observingScroll(options);
   }
+
+  window.addEventListener('load', function () {
+    if(document.querySelector('.vaga-block')) {
+      document.querySelector('.vaga-block').classList.remove('vaga-block')
+    }
+  })
 }
