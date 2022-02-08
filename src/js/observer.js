@@ -1,9 +1,9 @@
 export function observingScroll(customOptions) {
   
   const observerOptions = {
-    root: options.root,
-    rootMargin: options.rootMargin,
-    threshold: options.threshold
+    root: customOptions.root,
+    rootMargin: customOptions.rootMargin,
+    threshold: customOptions.threshold
   };
 
   let observer = new IntersectionObserver(function(entries) {
