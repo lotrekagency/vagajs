@@ -1,8 +1,10 @@
 # VagaJS
 
-WIP~
+**WIP~**
 
 A simple and straightforward animation library to enable CSS based animations on scroll, as soon as the elements become visible by the user.
+
+### https://lotrekagency.github.io/vagajs/
 
 
 ## Table of contents
