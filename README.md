@@ -2,7 +2,7 @@
 
 WIP~
 
-An immediate animation library using CSS class names for plug &amp; play transitions on elements when they become visible by the user.
+A simple and straightforward animation library to enable CSS based animations on scroll, as soon as the elements become visible by the user.
 
 
 ## Table of contents
