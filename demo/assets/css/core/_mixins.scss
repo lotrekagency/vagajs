@@ -1,0 +1,188 @@
+// Mixin for generating the core font rules 
+// [font-size-min, font-size-max, line-height, font-weight, font-family]
+@mixin text($fontSizeMin, $fontSizeMax, $lineHeight, $fontWeight, $fontType) {
+  @if $fontType=="main" {
+    font-family: $font-main;
+  }
+
+  @if $fontType=="off" {
+    font-family: $font-off;
+  }
+
+  font-size: $fontSizeMin+px;
+  font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + 2.25vw),#{($fontSizeMax)}px);
+
+  @if $fontSizeMax >= 30 {
+    font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + 3vw),#{($fontSizeMax)}px);
+  }
+  @if $fontSizeMax >= 40 {
+    font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + 3.5vw),#{($fontSizeMax)}px);
+  }
+  @if $fontSizeMax >= 50 {
+    font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + 4vw),#{($fontSizeMax)}px);
+  }
+  @if $fontSizeMax >= 60 {
+    font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + 4.5vw),#{($fontSizeMax)}px);
+  }
+  @if $fontSizeMax >= 70 {
+    font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + 5.5vw),#{($fontSizeMax)}px);
+  }
+
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+}
+
+// Mixin for generating the max-width container
+@mixin maxwidth {
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+
+  margin: 0 auto;
+  padding: 0 $u*2;
+}
+
+// Grid generator
+@mixin gridgen {
+  display: grid;
+  grid-template-columns: repeat(4, [col-start] minmax(0, 1fr));
+  grid-template-rows: max-content;
+  //grid-template-rows: minmax(100px,auto);
+  gap: $u*3;
+  margin: 0 auto;
+  padding-left: $u*2;
+  padding-right: $u*2;
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+    grid-template-columns: repeat(12, [col-start] minmax(0, 1fr));
+  }
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+  }
+  @media (min-width: 1400px) {
+    max-width: 1400px;
+  }
+}
+
+// Mixin for generating titles, using text mixin aswell
+@mixin title {
+  @include text(12, 16, 1.2, 700, main);
+  color: inherit;
+  margin: 0;
+}
+
+// Mixin to generate padding using the $u variable
+@mixin padding ($top, $right, $bottom, $left) {
+  padding: ($u * $top) ($u * $right) ($u * $bottom) ($u * $left);
+}
+
+// Mixin to generate margin using the $u variable
+@mixin margin ($top, $right, $bottom, $left) {
+  margin: ($u * $top) ($u * $right) ($u * $bottom) ($u * $left);
+}
+
+// Mixin to generate single padding rules, from 0 to 20
+// Example: pad-t-4 === padding-top: $u*4
+// Mixin used in _utils.scss
+@mixin pad-generator {
+  @each $tag, $direction in $directions {
+    &-#{$tag} {
+      @for $i from 0 through 20 {
+        &-#{$i} {
+          padding-#{$direction}: ($u * $i);
+        }
+      }
+    }
+  }
+}
+
+// Mixin to generate single margin rules, from 0 to 20
+// Example: mar-r-4 === margin-right: $u*4
+// Mixin used in _utils.scss
+@mixin mar-generator {
+  @each $tag, $direction in $directions {
+    &-#{$tag} {
+      @for $i from 0 through 20 {
+        &-#{$i} {
+          margin-#{$direction}: ($u * $i);
+        }
+      }
+    }
+  }
+}
+
+// Mixin to generate width sizes, from 0 to 10
+// Example: w-40 === width: 40%
+// Mixin used in _utils.scss
+@mixin width-generator {
+  @for $i from 0 through 10 {
+    &-#{$i * 10} {
+      width: ($i * 10%);
+    }
+  }
+}
+
+// Mixin to generate height sizes, from 0 to 10
+// Example: w-40 === height: 40%
+// Mixin used in _utils.scss
+@mixin height-generator {
+  @for $i from 0 through 10 {
+    &-#{$i * 10} {
+      height: ($i * 10%);
+    }
+  }
+}
+
+// Mixin to generate a spacer with padding, an util to add
+// vertical spacing to a web page's section.
+@mixin spacer($multiplier-1,$multiplier-2) {
+  padding: ($multiplier-1*$u*4) 0 ($multiplier-2*$u*4);
+  @media (min-width: 768px) {
+    padding: ($multiplier-1*$u*8) 0 ($multiplier-2*$u*8);
+  }
+}
+
+// Mixin to generate a spacer with margin, an util to add
+// vertical spacing to a web page's section.
+@mixin spacer-margin($multiplier-1,$multiplier-2) {
+  margin: ($multiplier-1*$u*4) 0 ($multiplier-2*$u*4);
+  @media (min-width: 768px) {
+    margin: ($multiplier-1*$u*8) 0 ($multiplier-2*$u*8);
+  }
+}
+
+// Mixin for responsive fill images
+@mixin img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@mixin bubble {
+  background-color: $white;
+  border-radius: $u;
+  padding: $u*2;
+}
+
+@mixin shadow {
+  box-shadow: 2px 2px $u*2 0px rgba($main, 0.75);
+}
+
+@mixin mobileBlock {
+
+  @media (max-width: $tablet) {
+    @include spacer(1,1);
+    padding-left: $u*2;
+    padding-right: $u*2;
+    height: auto;
+    display: block;
+  }
+}

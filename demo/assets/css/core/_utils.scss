@@ -1,0 +1,119 @@
+// Padding util
+.pad {
+  @include pad-generator;
+}
+
+// Margin util
+.mar {
+  @include mar-generator;
+}
+
+// Width util
+.w {
+  @include width-generator;
+}
+
+// Height util
+.h {
+  @include height-generator;
+}
+
+// Display
+.d {
+
+  // Display flex
+  &-f {
+    display: flex;
+    &-y {
+      &-center {
+        align-items: center;
+      }
+      &-start {
+        align-items: flex-start;
+      }
+      &-end {
+        align-items: flex-end;
+      }
+    }
+    &-x {
+      &-center {
+        justify-content: center;
+      }
+      &-start {
+        justify-content: flex-start;
+      }
+      &-end {
+        justify-content: flex-end;
+      }
+      &-between {
+        justify-content: space-between;
+      }
+      &-around {
+        justify-content: space-around;
+      }
+      &-evenly {
+        justify-content: space-evenly;
+      }
+    }
+    &-col {
+      flex-direction: column;
+    }
+    &-row {
+      flex-direction: row;
+    }
+  }//end of Display flex
+
+  &-b {
+    display: block;
+  }
+  &-i {
+    display: inline;
+  }
+  &-ib {
+    display: inline-block;
+  }
+}
+
+//colors
+.color {
+  &-white {
+    color: $white;
+  }
+  &-black {
+    color: $black;
+  }
+  &-grey {
+    color: $grey;
+  }
+  &-main {
+    color: $main;
+  }
+  &-alt {
+    color: $alt;
+  }
+  &-off {
+    color: $off;
+  }
+}//end of colors
+
+//backgrounds
+.bg {
+  &-white {
+    background-color: $white;
+  }
+  &-black {
+    background-color: $black;
+  }
+  &-grey {
+    background-color: $grey;
+  }
+  &-main {
+    background-color: $main;
+  }
+  &-alt {
+    background-color: $alt;
+  }
+  &-off {
+    background-color: $off;
+  }
+}//end of backgrounds

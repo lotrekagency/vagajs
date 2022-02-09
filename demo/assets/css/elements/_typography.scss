@@ -1,0 +1,157 @@
+//title
+.title {
+  @include title;
+  margin: 0 0 $u*2;
+
+  //title sizes
+  &-0 {
+    @include text(100, 54, 1.35, 400, off);
+  }
+  &-1 {
+    @include text(44, 54, 1.35, 400, off);
+  }
+  &-2 {
+    @include text(30, 44, 1.25, 400, off);
+  }
+  &-3 {
+    @include text(20, 30, 1.2, 400, off);
+  }
+  &-4 {
+    @include text(16, 20, 1.2, 400, off);
+    margin: 0 0 $u*2;
+  }
+  &-5 {
+    @include text(14, 20, 1.2, 400, off);
+    margin: 0 0 $u*2;
+  }
+  &-6 {
+    @include text(12, 14, 1.2, 400, off);
+    margin: 0 0 $u*2;
+  }
+}//end of title
+
+//font-family
+.font {
+  &-main {
+    font-family: $font-main;
+  }
+  &-off {
+    font-family: $font-off;
+  }
+}//end of font-family
+
+//text
+.text {
+  @include text(12, 16, 1.5, 400, main);
+  color: inherit;
+  margin: 0 0 $u*2;
+
+  //text sizes
+  &-xl {
+    @include text(20, 24, 1.5, 400, null);
+  }
+  &-l {
+    @include text(16, 20, 1.5, 400, null);
+  }
+  &-m {
+    @include text(12, 16, 1.5, 400, null);
+  }
+  &-s {
+    @include text(9, 12, 1.5, 400, null);
+  }
+  &-xs {
+    @include text(9, 9, 1.3, 400, null);
+  }
+
+  //text utils
+  &-center {
+    text-align: center;
+  }
+  &-left {
+    text-align: left;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-uppercase {
+    text-transform: uppercase;
+  }
+  &-lowercase {
+    text-transform: lowercase;
+  }
+
+  &.font-off {
+    @extend .font-off;
+  }
+}//end of text
+
+//font-weight
+.font-w {
+  &-900 {
+    font-weight: 900;
+  }
+  &-800 {
+    font-weight: 800;
+  }
+  &-700 {
+    font-weight: 700;
+  }
+  &-600 {
+    font-weight: 600;
+  }
+  &-500 {
+    font-weight: 500;
+  }
+  &-400 {
+    font-weight: 400;
+  }
+  &-300 {
+    font-weight: 300;
+  }
+
+  //obsolete, to remove and update docs
+  &-l {
+    font-weight: 700;
+  }
+
+  &-m {
+    font-weight: 500;
+  }
+
+  &-s {
+    font-weight: 400;
+  }
+  &-xs {
+    font-weight: 300;
+  }
+}//end of font-weight
+
+//headings
+h1 {
+  @extend .title-1;
+}
+h2 {
+  @extend .title-2;
+}
+h3 {
+  @extend .title-3;
+}
+h4 {
+  @extend .title-4;
+}
+h5 {
+  @extend .title-5;
+}
+h6 {
+  @extend .title-6;
+}//end of headings
+
+//others
+em {
+  font-style: initial;
+  background-color: $main;
+  color: $white;
+  margin: 0 0 $u*2;
+  @include padding(0,0.5,0,0.5);
+}
+//end of others

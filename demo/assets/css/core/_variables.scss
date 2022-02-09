@@ -1,0 +1,31 @@
+// Colors
+$black:     #222831;
+$white:     #FCFCFC;
+$grey:      #efe8d8;
+$main:      #2de2e6;
+$alt:       #ff3864;
+$off:       #261447;
+
+// Media Queries
+$mobileSm:      400px;
+$mobile:        767px;
+$tablet:        992px;
+$tabletLg:      1200px;
+$desktop:       1400px;
+$desktopLg:     1600px;
+
+// Motion
+$motion:        cubic-bezier(0.45, 0.05, 0.55, 0.95);
+
+// Font families
+$font-main: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$font-off: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+// Various
+$u:          8px;
+$directions: (
+  t:  top,
+  r:  right,
+  b:  bottom,
+  l:  left
+);

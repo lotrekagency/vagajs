@@ -1,0 +1,77 @@
+//button
+.btn {
+  display: inline-block;
+  @extend .text-m;
+  font-family: $font-main;
+  position: relative;
+  cursor: pointer;
+  background: $main;
+  color: $white;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid $main;
+  text-decoration: none;
+  @include padding(2,4,2,4);
+  margin-bottom: $u*2;
+  transition: all $motion .1s;
+  overflow: hidden;
+  z-index: 1;
+  appearance: none;
+  &:hover {
+    border-color: $main;
+    background: $white;
+    color: $main;
+    transition: all $motion .15s;
+  }
+
+  // .btn alternative styles
+  &-alt {
+    background: transparent;
+    border-color: $alt;
+    &:hover {
+      border-color: $alt;
+      color: $white;
+      background: $alt;
+    }
+  }
+  &-line {
+    color: $main;
+    background: transparent;
+    &:hover {
+      color: $main;
+    }
+  }
+  &-off {
+    color: $white;
+    background: $off;
+    border-color: $off;
+    &:hover {
+      border-color: $off;
+      background: $off;
+    }
+  }//end of .btn styles
+  
+  // .btn sizes
+  &.btn {
+    &-xl {
+      @extend .text-xl;
+      @include padding(2.5,5,2.5,5);
+    }
+    &-l {
+      @extend .text-l;
+      @include padding(2.5,5,2.5,5);
+    }
+    &-m {
+      @extend .text-m;
+      @include padding(2,4,2,4);
+    }
+    &-s {
+      @extend .text-s;
+      @include padding(2,4,2,4);
+    }
+    &-xs {
+      @extend .text-xs;
+      @include padding(1.5,3,1.5,3);
+    }//end of .btn sizes
+  }
+}//end of button

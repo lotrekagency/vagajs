@@ -1,0 +1,357 @@
+.vhead {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: $u;
+  background-color: $black;
+  z-index: 1000;
+  border-bottom-left-radius: $u;
+  @include shadow;
+
+  @media (max-width: $tablet) {
+    border-bottom-left-radius: 0;
+    width: 100%;
+    left: 0;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @media (max-width: $tablet) {
+      justify-content: center;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    margin: 0;
+    @include padding(0.5,1,0.5,1);
+    @include text(10, 16, 1.5, 400, off);
+    overflow: hidden;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: $u/2;
+      right: 0;
+      width: 80%;
+      height: 1px;
+      background-color: $alt;
+      transform-origin: right;
+      transform: translateX(calc(100% + $u));
+      transition: all $motion 0.25s;
+    }
+    &:hover {
+      &:before {
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+.vhero {
+  
+  &__inner {
+    @include maxwidth;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100vh;
+    @include mobileBlock;
+    @media (max-width: $tablet) {
+      @include spacer(4,4);
+    }
+  }
+  &__claim {
+    flex: 0 0 450px;
+    max-width: 450px;
+    margin-right: auto;
+
+    &__title {
+      background: linear-gradient(30deg, #2de2e6 0%, #86cdcf 16%, #afb7b8 33%, #cc9fa2 50%, #e1858d 66%, #f26678 83%, #ff3864 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 400;
+      display: inline-block;
+      word-break: keep-all;
+    }
+  }
+  &__info {
+    flex: 0 0 400px;
+    max-width: 400px;
+    @include bubble;
+    @include shadow;
+
+    code {
+      &:last-of-type {
+        margin-bottom: $u;
+      }
+    }
+  }
+}
+
+.vblocks {
+  @include spacer(1,1);
+
+  &__inner {
+    @include maxwidth;
+    @include mobileBlock;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  &__content {
+    flex: 1;
+    margin-right: 2rem;
+
+    .title {
+      margin-bottom: $u*4;
+      position: relative;
+      display: inline-block;
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: $u*2;
+        width: 100%;
+        height: 2px;
+        background-color: $alt;
+      }
+    }
+  }
+  &__group {
+    flex: 1;
+  }
+  &__group {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__box {
+    @include text(12, 14, 1.1, 400, main);
+
+    margin: $u*2;
+    padding: $u*2;
+
+    width: 120px;
+    height: 90px;
+    background-color: $main;
+    border-radius: 0.5rem;
+    color: $black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &--alt {
+      background-color: $alt;
+    }
+    &--off {
+      background-color: $white;
+      color: $black;
+    }
+  }
+}
+
+.vdoc {
+  @include spacer(1,1);
+
+  &__inner {
+    @include maxwidth;
+    @include mobileBlock;
+  }
+
+  .title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: $u*4;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: $u*2;
+      width: 100%;
+      height: 2px;
+      background-color: $alt;
+    }
+  }
+}
+
+.vb {
+  @include spacer(1,1);
+
+  &__inner {
+    @include maxwidth;
+    @include mobileBlock;
+  }
+  &__entry {
+    .title {
+      margin-bottom: $u*4;
+      position: relative;
+      display: inline-block;
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: $u*2;
+        width: 100%;
+        height: 2px;
+        background-color: $alt;
+      }
+    }
+  }
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: $u*8;
+    border-bottom: 2px solid $white;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: $tablet) {
+      display: block;
+    }
+  }
+  &__info {
+    width: 650px;
+    max-width: 100%;
+    margin-right: $u*4;
+
+    .title {
+      display: inline-block;
+      background-color: $white;
+      color: $black;
+      border-bottom: 2px solid $alt;
+      padding-top: $u/2;
+      padding-bottom: $u/2;
+      padding-left: $u*0.5;
+      padding-right: $u*2.5;
+      font-weight: 500;
+      font-size: 1.5em;
+    }
+  }
+  &__example {
+    border: 1px solid;
+    padding: 2rem;
+    //@include shadow;
+    @media (max-width: $tablet) {
+      width: min-content;
+      margin-bottom: $u*4;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__box {
+    @include text(16, 20, 1.1, 400, main);
+
+    width: 80px;
+    height: 80px;
+    background-color: $main;
+    border-radius: 0.25rem;
+    color: $black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &--alt {
+      background-color: $alt;
+    }
+    &--off {
+      background-color: $white;
+      color: $black;
+    }
+  }
+  &__subentry {
+    margin: $u*2 $u*4 $u*4;
+    display: inline-block;
+    position: relative;
+    .title {
+      margin-bottom: $u*0.5;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: $u*2;
+      width: 100%;
+      height: 2px;
+      background-color: $main;
+    }
+  }
+}
+
+.vc {
+  @include spacer(1,1);
+  
+  &__inner {
+    @include maxwidth;
+    @include mobileBlock;
+  }
+  .title {
+    margin-bottom: $u*4;
+    position: relative;
+    display: inline-block;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: $u*2;
+      width: 100%;
+      height: 2px;
+      background-color: $alt;
+    }
+  }
+}
+
+.vfoot {
+  background: $alt;
+  color: $black;
+  &__inner {
+    @include maxwidth;
+    @include spacer(0.125,0.125);
+    @include mobileBlock;
+
+    .text {
+      margin: 0;
+    }
+  }
+}
+
+body {
+  background: $black;
+  color: $white;
+}
+
+code {
+  @include text(14, 16, 1.1, 400, main);
+  color: $black;
+  background: $white;
+  border-radius: $u/2;
+  padding: $u/2 $u;
+  margin: $u 0 $u*2;
+  display: inline-block;
+
+  &.multiline {
+    white-space: pre-line;
+    padding-bottom: $u*3;
+  }
+}
+
+strong {
+  color: $alt;
+}
+
+main {
+  scroll-behavior: smooth;
+}
+
+html {
+  background: $main;
+}
