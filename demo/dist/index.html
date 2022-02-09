@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VagaJS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index.dc58b5cb.js"></script>
+    <link rel="stylesheet" href="/assets/index.1f7f0d2d.css">
+  </head>
+  <body>
+    
+    <main>
+      <header class="vhead">
+        <div class="vhead__inner">
+          <a href="#intro" class="vhead__link">•</a>
+          <a href="#example" class="vhead__link">Examples</a>
+          <a href="#getting-started" class="vhead__link">Getting started</a>
+          <a href="#docs" class="vhead__link">Documentation</a>
+          <a href="#customizing" class="vhead__link">Customizing</a>
+        </div>
+      </header>
+
+      <section id="intro" class="vhero">
+        <div class="vhero__inner">
+          
+          <div class="vhero__claim">
+            <h1 class="title title-0 vhero__claim__title">
+              VagaJS
+            </h1>
+            <h2 class="title title-3 vhero__claim__subtitle">
+              A simple and straightforward animation library to enable CSS based animations on scroll, as soon as the elements become visible by the user.
+            </h2>
+          </div>
+
+          <div class="vhero__info">
+            <p class="text text-s mar-b-0">
+              <code>npm install vagajs</code>
+              <br>
+              <code>import * as vaga from "vagajs/src/js/main.js";</code>
+              <br>
+              <code>vaga.start();</code>
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="example" class="vblocks">
+        <div class="vblocks__inner">
+          <div class="vblocks__content">
+            <h3 class="title title-2 vblocks__title">
+              IntersectionObserver + CSS
+            </h3>
+            <p class="text text-m">
+              Simple yet modern: using the IntersectionObserver API and CSS transitions to 
+              make a set of animations for your web projects, all you've to do is to simply add 
+              CSS classes to the target elements you want to animate.
+            </p>
+          </div>
+
+          <div class="vblocks__group">
+              <div class="vblocks__box vaga-fade-left vaga-delay-1 vaga-will">
+                Fade left
+              </div>
+              <div class="vblocks__box vaga-fade-in vaga-delay-2 vaga-will">
+                Fade in, with some delay
+              </div>
+              <div class="vblocks__box vblocks__box--alt vaga-delay-0-5 vaga-move-left vaga-will">
+                Move left
+              </div>
+              <div class="vblocks__box vblocks__box--off vaga-delay-3 vaga-opacity vaga-will">
+                Opacity
+              </div>
+              <div class="vblocks__box vblocks__box--alt vaga-delay-4-5 vaga-move-in vaga-will">
+                Move in, with even more delay
+              </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="getting-started" class="vdoc">
+        <div class="vdoc__inner">
+          <div class="vdoc__content">
+            <h3 class="title title-2">
+              Getting started
+            </h3>
+            <p class="text text-m">
+              Install VagaJS via a packet manager, such as npm:
+              <br>
+              <code>npm install vagajs</code>
+              <br>
+              Then import it as a module in your javascript build:
+              <br>
+              <code>import * as vaga from "vagajs/src/js/main.js";</code>
+              <br>
+              Now to run it simply start VagaJS somewhere in your javascript build:
+              <br>
+              <code>vaga.start();</code>
+            </p>
+            <p class="text text-m">
+              VagaJS can work by simply adding its CSS classes on HTML elements once you've installed, imported it in your web project and started it.
+              <br>
+              Let's say you want to play a fade in animation on an element, here's how it works:
+              <br>
+              <code>&lt;div class="vaga-fade-in"&gt;Hello there!&lt;/div&gt;</code>
+              <br>
+              Here's how the VagaJS CSS classes work:
+              <code>.vaga-&lt;property&gt;-&lt;direction&gt;</code>
+              <br>
+              <strong>property</strong>: there are currently 3 properties, which are fade, move and opacity.
+              <br>
+              <strong>direction</strong>: there are 4 directions, which are in, out, left and right. (The opacity property has no directions!)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="docs" class="vb">
+        <div class="vb__inner">
+          <div class="vb__entry">
+            <h3 class="title title-2">Documentation</h3>
+          </div>
+
+          <div class="vb__subentry">
+            <h4 class="title title-3">Animation classes</h4>
+          </div>
+          <div class="vb__row">
+            <div class="vb__info">
+              <h5 class="title title-4">Fade in</h5>
+              <p class="text text-s">
+                Add the <code>.vaga-fade-in</code> CSS class to the HTML element.
+                <br>
+                example: <code>&lt;div class="vaga-fade-in"&gt;&lt;/div&gt;</code>
+              </p>
+            </div>
+            <div class="vb__example">
+              <div class="vb__box vaga-fade-in vaga-delay-4"></div>
+            </div>
+          </div><!--/row-->
+          <div class="vb__row">
+            <div class="vb__info">
+              <h5 class="title title-4">Fade out</h5>
+              <p class="text text-s">
+                Add the <code>.vaga-fade-out</code> CSS class to the HTML element.
+                <br>
+                example: <code>&lt;div class="vaga-fade-out"&gt;&lt;/div&gt;</code>
+              </p>
+            </div>
+            <div class="vb__example">
+              <div class="vb__box vaga-fade-out vaga-delay-4"></div>
+            </div>
+          </div><!--/row-->
+          <div class="vb__row">
+            <div class="vb__info">
+              <h5 class="title title-4">Fade left</h5>
+              <p class="text text-s">
+                Add the <code>.vaga-fade-left</code> CSS class to the HTML element.
+                <br>
+                example: <code>&lt;div class="vaga-fade-left"&gt;&lt;/div&gt;</code>
+              </p>
+            </div>
+            <div class="vb__example">
+              <div class="vb__box vaga-fade-left vaga-delay-4"></div>
+            </div>
+          </div><!--/row-->
+          <div class="vb__row">
+            <div class="vb__info">
+              <h5 class="title title-4">Fade right</h5>
+              <p class="text text-s">
+                Add the <code>.vaga-fade-right</code> CSS class to the HTML element.
+                <br>
+                example: <code>&lt;div class="vaga-fade-right"&gt;&lt;/div&gt;</code>
+              </p>
+            </div>
+            <div class="vb__example">
+              <div class="vb__box vaga-fade-right vaga-delay-4"></div>
+            </div>
+          </div><!--/row-->
+          <div class="vb__row">
+            <div class="vb__info">
+              <h5 class="title title-4">Move in</h5>
+              <p class="text text-s">
+                Add the <code>.vaga-move-in</code> CSS class to the HTML element.
+                <br>
+                example: <code>&lt;div class="vaga-move-in"&gt;&lt;/div&gt;</code>
+              </p>
+            </div>
+            <div class="vb__example">
+              <div class="vb__box vaga-move-in vaga-delay-4"></div>
+            </div>
+          </div><!--/row-->
+          <div class="vb__row">
+            <div class="vb__info">
+              <h5 class="title title-4">Move out</h5>
+              <p class="text text-s">
+                Add the <code>.vaga-move-out</code> CSS class to the HTML element.
+                <br>
+                example: <code>&lt;div class="vaga-move-out"&gt;&lt;/div&gt;</code>
+              </p>
+            </div>
+            <div class="vb__example">
+              <div class="vb__box vaga-move-out vaga-delay-4"></div>
+            </div>
+          </div><!--/row-->
+          <div class="vb__row">
+            <div class="vb__info">
+              <h5 class="title title-4">Move left</h5>
+              <p class="text text-s">
+                Add the <code>.vaga-move-left</code> CSS class to the HTML element.
+                <br>
+                example: <code>&lt;div class="vaga-move-left"&gt;&lt;/div&gt;</code>
+              </p>
+            </div>
+            <div class="vb__example">
+              <div class="vb__box vaga-move-left vaga-delay-4"></div>
+            </div>
+          </div><!--/row-->
+          <div class="vb__row">
+            <div class="vb__info">
+              <h5 class="title title-4">Move right</h5>
+              <p class="text text-s">
+                Add the <code>.vaga-move-right</code> CSS class to the HTML element.
+                <br>
+                example: <code>&lt;div class="vaga-move-right"&gt;&lt;/div&gt;</code>
+              </p>
+            </div>
+            <div class="vb__example">
+              <div class="vb__box vaga-move-right vaga-delay-4"></div>
+            </div>
+          </div><!--/row-->
+          <div class="vb__row">
+            <div class="vb__info">
+              <h5 class="title title-4">Opacity</h5>
+              <p class="text text-s">
+                Add the <code>.vaga-opacity</code> CSS class to the HTML element.
+                <br>
+                example: <code>&lt;div class="vaga-opacity"&gt;&lt;/div&gt;</code>
+              </p>
+            </div>
+            <div class="vb__example">
+              <div class="vb__box vaga-opacity vaga-delay-4"></div>
+            </div>
+          </div><!--/row-->
+
+          <div class="vb__subentry">
+            <h4 class="title title-3">Util classes</h4>
+          </div>
+          <div class="vb__row">
+            <div class="vb__info">
+              <h5 class="title title-4">
+                Responsive util
+              </h5>
+              <p class="text text-s">
+                <code>.vaga-fade-in--&lt;breakpoint&gt;</code>
+                <br>
+                By adding <code>--md</code> or <code>--lg</code> to the vaga animations you're going to make them responsive,
+                like <code>.vaga-move-right--lg</code> is going to move the element only on large devices such as desktops.
+              </p>
+              <p class="text text-s">
+                Want to have a fade-in on an element when it's viewed in a mobile device and then replacing that animation with a fade-left when viewed on bigger viewports?
+                <br>
+                <code>
+                  &lt;div class="vaga-fade-in vaga-fade-left--md"&gt;Responsive fades&lt;/div&gt;
+                </code>
+              </p>
+            </div>
+            <div class="vb__example">
+              <div class="vb__box vaga-fade-in vaga-fade-left--md vaga-delay-4"></div>
+            </div>
+          </div><!--/row-->
+          <div class="vb__row">
+            <div class="vb__info">
+              <h5 class="title title-4">
+                Delay util
+              </h5>
+              <p class="text text-s">
+                <code>.vaga-delay-&lt;value&gt;</code>
+                <br>
+                Sometimes you want to have a bit of delay between animations, and for this issue VagaJS comes with a delay util.
+                <br>
+                This util will apply a delay based on its value, where the values are 1, 2, 3 and 4.
+                <br>
+                <code>.vaga-delay-0-5</code> - will apply a delay of duration * 0.5. duration is an option, and its default is 0.375s, so this util will apply a delay of half of that value.
+                <br>
+                <code>.vaga-delay-1</code> - will apply a delay of duration * 1 (which would be 0.375s).
+                <br>
+                <code>.vaga-delay-1-5</code> - will apply a delay of duration * 1.5 (which would be 0.375s * 1.5).
+                <br>
+                <code>.vaga-delay-2</code> - will apply a delay of duration * 2 (which would be 0.375s * 2).
+                <br>
+                And so on, up to <code>.vaga-delay-6</code>, which is duration * 6.
+              </p>
+              <p class="text text-s">
+                Want to have a fade-in on an element when it's viewed in a mobile device and then replacing that animation with a fade-left when viewed on bigger viewports?
+                <br>
+                <code>
+                  &lt;div class="vaga-fade-in vaga-fade-left--md"&gt;Responsive fades&lt;/div&gt;
+                </code>
+              </p>
+            </div>
+            <div class="vb__example">
+              <div class="vb__box vaga-fade-left vaga-delay-5"></div>
+            </div>
+          </div><!--/row-->
+          <div class="vb__row">
+            <div class="vb__info">
+              <h5 class="title title-4">
+                Will-change (perfomance) util
+              </h5>
+              <p class="text text-s">
+                <code>.vaga-will;</code> - applies will-change: transform; for smoother animations
+              </p>
+            </div>
+          </div><!--/row-->
+          <div class="vb__row">
+            <div class="vb__info">
+              <h5 class="title title-4">
+                Blocking animations until window is loaded
+              </h5>
+              <p class="text text-s">
+                <code>.vaga-block;</code> - trick to have smooth animations and transitions only when the window is loaded, add this to the parent/grandparent element such as the body.
+              </p>
+            </div>
+          </div><!--/row-->
+
+        </div>
+      </section>
+
+      <section id="customizing" class="vc">
+        <div class="vc__inner">
+          <h3 class="title title-2">Customizing VagaJS</h3>
+          <p class="text text-m">
+            VagaJS has a set of default options to make it work right off the bat, however you can customize the options easily.
+            <br>
+            Here are VagaJS' default options:
+          </p>
+          <ul>
+            <li>
+              <p class="text text-s">
+                <code>root</code> - default value is null, this is an <a href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#parameters" target="_blank" rel="noopener noreferrer">IntersectionObserver's parameter</a>.
+              </p>
+            </li>
+            <li>
+              <p class="text text-s">
+                <code>rootMargin</code> - default value is 0px, this is an <a href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#parameters" target="_blank" rel="noopener noreferrer">IntersectionObserver's parameter</a>.
+              </p>
+            </li>
+            <li>
+              <p class="text text-s">
+                <code>threshold</code> - default value is 0.25, this is an <a href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#parameters" target="_blank" rel="noopener noreferrer">IntersectionObserver's parameter</a>.
+              </p>
+            </li>
+            <li>
+              <p class="text text-s">
+                <code>targets</code> - default value is <code>document.querySelectorAll("[class*='vaga-'")</code>, this is an <a href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#parameters" target="_blank" rel="noopener noreferrer">IntersectionObserver's parameter</a>.
+              </p>
+            </li>
+            <li>
+              <p class="text text-s">
+                <code>duration</code> - default is 0.375s, CSS transition-duration.
+              </p>
+            </li>
+            <li>
+              <p class="text text-s">
+                <code>timingFunction</code> - default is ease-in, CSS transition-timing-function (can accept cubic-bezier() functions).
+              </p>
+            </li>
+          </ul>
+          <p class="text text-m">
+            To customize these options, simply do like this:
+            <br>
+            <code class="multiline">
+              var options = { 
+                &nbsp;&nbsp;&nbsp;&nbsp;threshold: 0.15, 
+                &nbsp;&nbsp;&nbsp;&nbsp;duration: 0.75, 
+                &nbsp;&nbsp;&nbsp;&nbsp;timingFunction: "linear" 
+              };
+
+              vaga.start(options)
+            </code>
+          </p>
+        </div>
+      </section>
+
+      <footer class="vfoot">
+        <div class="vfoot__inner">
+          <p class="text text-s">
+            Copyright (c) 2022 Lotrèk - VagaJS is licensed under the MIT License.
+          </p>
+        </div>
+      </footer>
+
+    </main>
+
+    
+  </body>
+</html>
