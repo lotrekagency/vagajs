@@ -103,13 +103,15 @@ Sometimes you want to have a bit of delay between animations, and for this issue
 
 This util will apply a delay based on its value, where the values are *1*, *2*, *3* and *4*.
 
-`.vaga-delay-1` - will apply a delay of *duration* / 2. *duration* is an option, and its default is 0.375s, so this util will apply a delay of half of that value.
+`.vaga-delay-0-5` - will apply a delay of *duration* * 0.5. *duration* is an option, and its default is 0.375s, so this util will apply a delay of half of that value.
 
-`.vaga-delay-2` - will apply a delay of *duration* (which would be 0.375s).
+`.vaga-delay-1` - will apply a delay of *duration* * 1 (which would be 0.375s).
 
-`.vaga-delay-3` - will apply a delay of *duration* * 1.5 (which would be 0.375s * 1.5).
+`.vaga-delay-1-5` - will apply a delay of *duration* * 1.5 (which would be 0.375s * 1.5).
 
-`.vaga-delay-4` - will apply a delay of *duration* * 2 (which would be 0.375s * 2).
+`.vaga-delay-2` - will apply a delay of *duration* * 2 (which would be 0.375s * 2).
+
+And so on, up to `.vaga-delay-6`, which is *duration* * 6.
 
 
 #### Various util classes
