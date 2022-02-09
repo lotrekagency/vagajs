@@ -1,5 +1,7 @@
 import './assets/css/main.scss'
-import * as vaga from "./../src/js/main.js"
+import * as vaga from "./src/js/main.js"
+
+// This is for the demo page!
 
 window.addEventListener("load", () => {
   var options = {

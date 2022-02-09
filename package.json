@@ -9,9 +9,13 @@
   "scripts": {
     "dev": "webpack --config webpack.config.js --watch",
     "build": "webpack -p",
-    "build-dev": "webpack"
+    "build-dev": "webpack",
+    "vite-dev": "vite",
+    "vite-build": "vite build",
+    "vite-preview": "vite preview"
   },
   "devDependencies": {
+    "vite": "^2.7.2",
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "babel-loader": "^8.0.5",
@@ -41,6 +45,7 @@
     "webpack": "^4.29.0",
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.1.0",
-    "webpack-merge": "^4.1.4"
+    "webpack-merge": "^4.1.4",
+    "sass": "^1.49.7"
   }
 }

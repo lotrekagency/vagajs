@@ -7,7 +7,7 @@ const config = {
   mode: 'development',
   entry: './src/js/main.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
     filename: 'vaga.min.js',
     library: 'vaga',
     libraryTarget: 'umd'
