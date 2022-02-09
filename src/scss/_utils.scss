@@ -4,40 +4,64 @@
   }
   &-delay {
     &-0-5 {
-      transition-delay: calc(var(--duration) * 0.5);
+      &.loaded {
+        transition-delay: calc(var(--duration) * 0.5);
+      }
     }
     &-1 {
-      transition-delay: var(--duration);
+      &.loaded {
+        transition-delay: var(--duration);
+      }
     }
     &-1-5 {
-      transition-delay: calc(var(--duration) * 1.5);
+      &.loaded {
+        transition-delay: calc(var(--duration) * 1.5);
+      }
     }
     &-2 {
-      transition-delay: calc(var(--duration) * 2);
+      &.loaded {
+        transition-delay: calc(var(--duration) * 2);
+      }
     }
     &-2-5 {
-      transition-delay: calc(var(--duration) * 2.5);
+      &.loaded {
+        transition-delay: calc(var(--duration) * 2.5);
+      }
     }
     &-3 {
-      transition-delay: calc(var(--duration) * 3);
+      &.loaded {
+        transition-delay: calc(var(--duration) * 3);
+      }
     }
     &-3-5 {
-      transition-delay: calc(var(--duration) * 3.5);
+      &.loaded {
+        transition-delay: calc(var(--duration) * 3.5);
+      }
     }
     &-4 {
-      transition-delay: calc(var(--duration) * 4);
+      &.loaded {
+        transition-delay: calc(var(--duration) * 4);
+      }
     }
     &-4-5 {
-      transition-delay: calc(var(--duration) * 4.5);
+      &.loaded {
+        transition-delay: calc(var(--duration) * 4.5);
+      }
     }
     &-5 {
-      transition-delay: calc(var(--duration) * 5);
+      &.loaded {
+        transition-delay: calc(var(--duration) * 5);
+      }
     }
     &-5-5 {
-      transition-delay: calc(var(--duration) * 5.5);
+      &.loaded {
+        transition-delay: calc(var(--duration) * 5.5);
+      }
     }
     &-6 {
-      transition-delay: calc(var(--duration) * 6);
+      &.loaded {
+        transition-delay: calc(var(--duration) * 6);
+      }
     }
   }
   &-block * {

@@ -1,6 +1,6 @@
 {
   "name": "vagajs",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "An immediate animation library using CSS class names for plug & play transitions.",
   "main": "src/main.js",
   "repository": "vagajs",
