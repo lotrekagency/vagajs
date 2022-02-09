@@ -4,40 +4,40 @@
   }
   &-delay {
     &-0-5 {
-      transition-delay: calc(var(--duration) * 0.5);
+      transition-delay: calc(var(--duration) * 0.5)s;
     }
     &-1 {
-      transition-delay: var(--duration);
+      transition-delay: var(--duration)s;
     }
     &-1-5 {
-      transition-delay: calc(var(--duration) * 1.5);
+      transition-delay: calc(var(--duration) * 1.5)s;
     }
     &-2 {
-      transition-delay: calc(var(--duration) * 2);
+      transition-delay: calc(var(--duration) * 2)s;
     }
     &-2-5 {
-      transition-delay: calc(var(--duration) * 2.5);
+      transition-delay: calc(var(--duration) * 2.5)s;
     }
     &-3 {
-      transition-delay: calc(var(--duration) * 3);
+      transition-delay: calc(var(--duration) * 3)s;
     }
     &-3-5 {
-      transition-delay: calc(var(--duration) * 3.5);
+      transition-delay: calc(var(--duration) * 3.5)s;
     }
     &-4 {
-      transition-delay: calc(var(--duration) * 4);
+      transition-delay: calc(var(--duration) * 4)s;
     }
     &-4-5 {
-      transition-delay: calc(var(--duration) * 4.5);
+      transition-delay: calc(var(--duration) * 4.5)s;
     }
     &-5 {
-      transition-delay: calc(var(--duration) * 5);
+      transition-delay: calc(var(--duration) * 5)s;
     }
     &-5-5 {
-      transition-delay: calc(var(--duration) * 5.5);
+      transition-delay: calc(var(--duration) * 5.5)s;
     }
     &-6 {
-      transition-delay: calc(var(--duration) * 6);
+      transition-delay: calc(var(--duration) * 6)s;
     }
   }
   &-block * {
