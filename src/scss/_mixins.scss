@@ -12,7 +12,9 @@
 
 // Fades
 @mixin fadeIn {
-  transition: opacity var(--timing-function) var(--duration), transform var(--timing-function) var(--duration);
+  transition-property: opacity, transform;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
   opacity: 0;
   transform: translateY(40px);
   @include animationsBundle($opacity: true, $transform: true);
@@ -21,7 +23,9 @@
   }
 }
 @mixin fadeOut {
-  transition: opacity var(--timing-function) var(--duration), transform var(--timing-function) var(--duration);
+  transition-property: opacity, transform;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
   opacity: 0;
   transform: translateY(-40px);
   @include animationsBundle($opacity: true, $transform: true);
@@ -30,7 +34,9 @@
   }
 }
 @mixin fadeLeft {
-  transition: opacity var(--timing-function) var(--duration), transform var(--timing-function) var(--duration);
+  transition-property: opacity, transform;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
   opacity: 0;
   transform: translateX(-40px);
   @include animationsBundle($opacity: true, $transform: true);
@@ -39,7 +45,9 @@
   }
 }
 @mixin fadeRight {
-  transition: opacity var(--timing-function) var(--duration), transform var(--timing-function) var(--duration);
+  transition-property: opacity, transform;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
   opacity: 0;
   transform: translateX(40px);
   @include animationsBundle($opacity: true, $transform: true);
@@ -50,14 +58,18 @@
 
 // Opacity
 @mixin opacity {
-  transition: opacity var(--timing-function) var(--duration);
+  transition-property: opacity;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
   opacity: 0;
   @include animationsBundle($opacity: true, $transform: false);
 }
 
 // Move
 @mixin moveIn {
-  transition: transform var(--timing-function) var(--duration);
+  transition-property: transform;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
   transform: translateY(40px);
   @include animationsBundle($opacity: false, $transform: true);
   @media (max-width:$mobile) {
@@ -65,7 +77,9 @@
   }
 }
 @mixin moveOut {
-  transition: transform var(--timing-function) var(--duration);
+  transition-property: transform;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
   transform: translateY(-40px);
   @include animationsBundle($opacity: false, $transform: true);
   @media (max-width:$mobile) {
@@ -73,7 +87,9 @@
   }
 }
 @mixin moveLeft {
-  transition: transform var(--timing-function) var(--duration);
+  transition-property: transform;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
   transform: translateX(-40px);
   @include animationsBundle($opacity: false, $transform: true);
   @media (max-width:$mobile) {
@@ -81,7 +97,9 @@
   }
 }
 @mixin moveRight {
-  transition: transform var(--timing-function) var(--duration);
+  transition-property: transform;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
   transform: translateX(40px);
   @include animationsBundle($opacity: false, $transform: true);
   @media (max-width:$mobile) {
