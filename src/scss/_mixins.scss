@@ -1,6 +1,8 @@
 
 @mixin animationsBundle($opacity: false, $transform: false) {
+  pointer-events: none;
   &.loaded {
+    pointer-events: initial;
     @if $opacity {
       opacity: 1;
     }
