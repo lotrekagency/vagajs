@@ -1,10 +1,10 @@
-# Vaga
+# VagaJS
 
-WIP~
+**WIP~**
 
 A simple and straightforward animation library to enable CSS based animations on scroll, as soon as the elements become visible by the user.
 
-### https://lotrekagency.github.io/vaga/
+### https://lotrekagency.github.io/vagajs/
 
 
 ## Table of contents
@@ -26,30 +26,30 @@ A simple and straightforward animation library to enable CSS based animations on
 
 ### Getting started
 
-Install Vaga via a packet manager, such as npm:
+Install VagaJS via a packet manager, such as npm:
 
-`npm install vaga`
+`npm install vagajs`
 
 Then import it as a module in your javascript build:
 
-`import * as vaga from "vaga/src/js/main.js";`
+`import * as vaga from "vagajs/src/js/main.js";`
 
-Now to run it simply start Vaga somewhere in your javascript build:
+Now to run it simply start VagaJS somewhere in your javascript build:
 
 `vaga.start();`
 
-Vaga has a set of default options to make it work right off the bat, however you can customize the options easily, more info in the documentation section.
+VagaJS has a set of default options to make it work right off the bat, however you can customize the options easily, more info in the documentation section.
 
 
 ### Documentation
 
-Vaga can work by simply adding its CSS classes on HTML elements once you've installed, imported it in your web project and started it.
+VagaJS can work by simply adding its CSS classes on HTML elements once you've installed, imported it in your web project and started it.
 
 Let's say you want to play a fade in animation on an element, here's how it works:
 
 `<div class="vaga-fade-in" style="background:lime;">Hello there!</div>`
 
-Here's how the Vaga CSS classes work:
+Here's how the VagaJS CSS classes work:
 
 `.vaga-<property>-<direction>`
 
@@ -83,7 +83,7 @@ Here's how the Vaga CSS classes work:
 
 #### Responsive util classes
 
-However you may want to have different animations on different viewports: that's why there are responsive utils in Vaga.
+However you may want to have different animations on different viewports: that's why there are responsive utils in VagaJS.
 
 Want to have a fade-in on an element when it's viewed in a mobile device and then replacing that animation with a fade-left when viewed on bigger viewports?
 
@@ -99,7 +99,7 @@ Breakpoints are *md* (min-width: 992px) and *lg* (min-width: 1400px), here's ano
 
 #### Delay util classes
 
-Sometimes you want to have a bit of delay between animations, and for this issue Vaga comes with a delay util:
+Sometimes you want to have a bit of delay between animations, and for this issue VagaJS comes with a delay util:
 
 `.vaga-delay-<value>`
 
@@ -127,12 +127,12 @@ And so on, up to `.vaga-delay-6`, which is *duration* * 6.
 
 This library is built on [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API), which detects when an element is being viewed by the user. 
 
-By adding the Vaga classes to your HTML elements, you assign an observer to them, detecting when they are visible, enabling and kicking off the animations.
+By adding the VagaJS classes to your HTML elements, you assign an observer to them, detecting when they are visible, enabling and kicking off the animations.
 
 
 ### Options and how to customize them
 
-Vaga has a set of default options, which are the following:
+VagaJS has a set of default options, which are the following:
 
 `root` - default value is *null*, this is an [IntersectionObserver's parameter](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#parameters).
 
@@ -159,12 +159,12 @@ To customize these options, simply do like this:
 
 ### Browser support
 
-Vaga works on the latest versions of Chrome, Firefox, Edge and Safari.
+VagaJS works on the latest versions of Chrome, Firefox, Edge and Safari.
 
 
 ### Copyright and license
 
-lotrekagency/vaga is licensed under the MIT License.
+lotrekagency/vagajs is licensed under the MIT License.
 
 ### TODO
 

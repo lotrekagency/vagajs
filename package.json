@@ -1,9 +1,9 @@
 {
-  "name": "vaga",
-  "version": "1.0.0",
+  "name": "vagajs",
+  "version": "0.1.3",
   "description": "A simple and straightforward animation library to enable CSS based animations on scroll, as soon as the elements become visible by the user.",
   "main": "src/main.js",
-  "repository": "vaga",
+  "repository": "vagajs",
   "author": "Andrea Morosi",
   "license": "MIT",
   "scripts": {
