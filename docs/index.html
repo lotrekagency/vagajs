@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="assets/index.a179f5f3.js"></script>
-    <link rel="stylesheet" href="assets/index.1f7f0d2d.css">
+    <script type="module" crossorigin src="assets/index.5812c704.js"></script>
+    <link rel="stylesheet" href="assets/index.31d43074.css">
   </head>
   <body>
     
@@ -70,7 +70,8 @@
               <div class="vblocks__box vaga-fade-in vaga-delay-2 vaga-will">
                 Fade in, with some delay
               </div>
-              <div class="vblocks__box vblocks__box--alt vaga-delay-0-5 vaga-move-left vaga-will">
+              <div 
+                class="vblocks__box vblocks__box--alt vaga-delay-0-5 vaga-move-left vaga-will">
                 Move left
               </div>
               <div class="vblocks__box vblocks__box--off vaga-delay-3 vaga-opacity vaga-will">
@@ -249,6 +250,28 @@
           </div><!--/row-->
 
           <div class="vb__subentry">
+            <h4 class="title title-3">Custom length/size</h4>
+          </div>
+          <div class="vb__row">
+            <div class="vb__info">
+              <p class="text text-s">
+                <code>data-vsize="60"</code>
+                <br>
+                Both <strong>fade</strong> and <strong>move</strong> animations have a default transform length of 40px (20px on mobile), 
+                to customize this option you need to add a <strong>dataset</strong> with <strong>vsize</strong> 
+                as the datataset property and an integer number as the value.
+                <br>
+                example: <code>&lt;div class="vaga-move-right" data-vsize="60"&gt;&lt;/div&gt;</code>
+                <br>
+                This will make the element move from a starting point of 60px instead of 40px, which will be half of that value in mobile (30px).
+              </p>
+            </div>
+            <div class="vb__example">
+              <div class="vb__box vaga-move-right vaga-delay-4" data-vsize="60"></div>
+            </div>
+          </div><!--/row-->
+
+          <div class="vb__subentry">
             <h4 class="title title-3">Util classes</h4>
           </div>
           <div class="vb__row">
@@ -384,7 +407,7 @@
       <footer class="vfoot">
         <div class="vfoot__inner">
           <p class="text text-s">
-            Copyright (c) 2022 Lotrèk - VagaJS is licensed under the MIT License.
+            Copyright (c) 2022 Lotrèk - Vaga is licensed under the MIT License.
           </p>
         </div>
       </footer>
