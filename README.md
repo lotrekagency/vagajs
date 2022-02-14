@@ -81,7 +81,7 @@ Here's how the VagaJS CSS classes work:
 
 **opacity**: `.vaga-opacity`
 
-
+---
 #### Custom length/size
 
 Both *fade* and *fade* animations have a default transform length of 40px (20px on mobile), to customize this option you need to add a *dataset*, with *vsize* as the datataset property and an integer number as the value.
