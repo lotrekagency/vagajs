@@ -58,6 +58,7 @@ Here's how the VagaJS CSS classes work:
 *direction*: there are 4 directions, which are *in*, *out*, *left* and *right*. 
 (The opacity property has no directions!)
 
+
 #### Animation classes
 
 **fade-in**: `.vaga-fade-in`
@@ -81,6 +82,13 @@ Here's how the VagaJS CSS classes work:
 **opacity**: `.vaga-opacity`
 
 
+#### Custom length/size
+
+Both *fade* and *fade* animations have a default transform length of 40px (20px on mobile), to customize this option you need to add a *dataset*, with *vsize* as the datataset property and an integer number as the value.
+
+example: `<div class="vaga-move-right" data-vsize="60"></div>`
+
+
 #### Responsive util classes
 
 However you may want to have different animations on different viewports: that's why there are responsive utils in VagaJS.
@@ -96,6 +104,7 @@ These responsive util classes are mobile-first and work as follow:
 Breakpoints are *md* (min-width: 992px) and *lg* (min-width: 1400px), here's another example:
 
 `.vaga-move-right--lg`
+
 
 #### Delay util classes
 

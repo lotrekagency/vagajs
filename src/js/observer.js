@@ -10,13 +10,16 @@ export function observingScroll(customOptions) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         //callback
-        entry.target.classList.add('loaded');
+        entry.target.classList.add('loaded')
       }
     });
   },observerOptions);
 
   customOptions.targets.forEach(item => {
     observer.observe(item);
+    if(item.dataset.vsize !== undefined) {
+      item.style.setProperty("--size", item.dataset.vsize + "px")
+    }
   });
 
   if(customOptions.duration !== undefined) {
@@ -25,5 +28,9 @@ export function observingScroll(customOptions) {
 
   if(customOptions.timingFunction !== undefined) {
     document.documentElement.style.setProperty("--timing-function", customOptions.timingFunction)
+  }
+
+  if(customOptions.size !== undefined) {
+    document.documentElement.style.setProperty("--size", customOptions.size)
   }
 }
