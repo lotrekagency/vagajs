@@ -144,7 +144,7 @@
 // vertical spacing to a web page's section.
 @mixin spacer($multiplier-1,$multiplier-2) {
   padding: ($multiplier-1*$u*4) 0 ($multiplier-2*$u*4);
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     padding: ($multiplier-1*$u*8) 0 ($multiplier-2*$u*8);
   }
 }
@@ -153,7 +153,7 @@
 // vertical spacing to a web page's section.
 @mixin spacer-margin($multiplier-1,$multiplier-2) {
   margin: ($multiplier-1*$u*4) 0 ($multiplier-2*$u*4);
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     margin: ($multiplier-1*$u*8) 0 ($multiplier-2*$u*8);
   }
 }

@@ -8,7 +8,7 @@
   border-bottom-left-radius: $u;
   @include shadow;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $mobile) {
     border-bottom-left-radius: 0;
     width: 100%;
     left: 0;
@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    @media (max-width: $tablet) {
+    @media (max-width: $mobile) {
       justify-content: center;
     }
   }
@@ -60,7 +60,7 @@
 
     height: 100vh;
     @include mobileBlock;
-    @media (max-width: $tablet) {
+    @media (max-width: $mobile) {
       @include spacer(4,4);
     }
   }
@@ -213,7 +213,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    @media (max-width: $tablet) {
+    @media (max-width: $mobile) {
       display: block;
     }
   }
@@ -239,7 +239,7 @@
     border: 1px solid;
     padding: 2rem;
     //@include shadow;
-    @media (max-width: $tablet) {
+    @media (max-width: $mobile) {
       width: min-content;
       margin-bottom: $u*4;
       margin-left: auto;
@@ -354,4 +354,29 @@ main {
 
 html {
   background: $main;
+}
+
+section {
+  @media (max-width: $mobile) {
+    padding: 0 $u*2;
+  }
+}
+
+.repolink {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $u/2;
+  border-bottom-right-radius: 8px;
+  filter: invert(1);
+
+  @media (max-width: $mobile) {
+    top: initial;
+    left: initial;
+    bottom: 0;
+    right: 0;
+  }
 }
