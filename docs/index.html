@@ -296,13 +296,6 @@
                 <br>
                 And so on, up to <code>.vaga-delay-6</code>, which is duration * 6.
               </p>
-              <p class="text text-s">
-                Want to have a fade-in on an element when it's viewed in a mobile device and then replacing that animation with a fade-left when viewed on bigger viewports?
-                <br>
-                <code>
-                  &lt;div class="vaga-fade-in vaga-fade-left--md"&gt;Responsive fades&lt;/div&gt;
-                </code>
-              </p>
             </div>
             <div class="vb__example">
               <div class="vb__box vaga-fade-left vaga-delay-5"></div>
@@ -314,7 +307,7 @@
                 Will-change (perfomance) util
               </h5>
               <p class="text text-s">
-                <code>.vaga-will;</code> - applies will-change: transform; for smoother animations
+                <code>.vaga-will</code> - applies will-change: transform; for smoother animations
               </p>
             </div>
           </div><!--/row-->
@@ -324,7 +317,7 @@
                 Blocking animations until window is loaded
               </h5>
               <p class="text text-s">
-                <code>.vaga-block;</code> - trick to have smooth animations and transitions only when the window is loaded, add this to the parent/grandparent element such as the body.
+                <code>.vaga-block</code> - trick to have smooth animations and transitions only when the window is loaded, add this to the parent/grandparent element such as the body.
               </p>
             </div>
           </div><!--/row-->
@@ -353,7 +346,7 @@
             </li>
             <li>
               <p class="text text-s">
-                <code>threshold</code> - default value is 0.25, this is an <a href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#parameters" target="_blank" rel="noopener noreferrer">IntersectionObserver's parameter</a>.
+                <code>threshold</code> - default value is 0.25 (max value is 1), this is an <a href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#parameters" target="_blank" rel="noopener noreferrer">IntersectionObserver's parameter</a>.
               </p>
             </li>
             <li>
