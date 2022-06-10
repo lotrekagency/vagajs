@@ -1,6 +1,6 @@
 {
   "name": "vagajs",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A simple and straightforward animation library to enable CSS based animations on scroll, as soon as the elements become visible by the user.",
   "main": "src/main.js",
   "repository": "vagajs",
