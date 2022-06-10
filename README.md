@@ -30,9 +30,13 @@ Install VagaJS via a packet manager, such as npm:
 
 `npm install vagajs`
 
-Then import it as a module in your javascript build:
+Then import it in your javascript build:
 
-`import * as vaga from "vagajs/src/js/main.js";`
+`import * as vaga from "vagajs/build/vaga.min.js";`
+
+and the CSS aswell:
+
+`import "vagajs/build/vaga.min.css"; //or add it in your CSS workflow`
 
 Now to run it simply start VagaJS somewhere in your javascript build:
 

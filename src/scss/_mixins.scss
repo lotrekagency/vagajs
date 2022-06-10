@@ -26,18 +26,18 @@
 }
 @mixin fadeOut {
   opacity: 0;
-  transform: translateY(calc(var(--size) * -1));
+  transform: translateY(- calc(var(--size)));
   @include animationsBundle($opacity: true, $transform: true);
   @media (max-width:$mobile) {
-    transform: translateY(calc(var(--size) * -1 / 2));
+    transform: translateY(- calc(var(--size) / 2));
   }
 }
 @mixin fadeLeft {
   opacity: 0;
-  transform: translateX(calc(var(--size) * -1));
+  transform: translateX(- calc(var(--size)));
   @include animationsBundle($opacity: true, $transform: true);
   @media (max-width:$mobile) {
-    transform: translateX(calc(var(--size) * -1 / 2));
+    transform: translateX(- calc(var(--size) / 2));
   }
 }
 @mixin fadeRight {
@@ -64,17 +64,17 @@
   }
 }
 @mixin moveOut {
-  transform: translateY(calc(var(--size) * -1));
+  transform: translateY(- calc(var(--size)));
   @include animationsBundle($opacity: false, $transform: true);
   @media (max-width:$mobile) {
-    transform: translateY(calc(var(--size) * -1 / 2));
+    transform: translateY(- calc(var(--size) / 2));
   }
 }
 @mixin moveLeft {
-  transform: translateX(calc(var(--size) * -1));
+  transform: translateX(- calc(var(--size)));
   @include animationsBundle($opacity: false, $transform: true);
   @media (max-width:$mobile) {
-    transform: translateX(calc(var(--size) * -1 / 2));
+    transform: translateX(- calc(var(--size) / 2));
   }
 }
 @mixin moveRight {
