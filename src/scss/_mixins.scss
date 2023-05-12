@@ -23,6 +23,15 @@
   @media (max-width:$mobile) {
     transform: translateY(calc(var(--size) / 2));
   }
+  // &.vaga-unload {
+  //   transform: translateY(var(--size));
+  //   pointer-events: none;
+  //   transition-delay: 0s;
+  //   opacity: 0;
+  //   @media (max-width:$mobile) {
+  //     transform: translateY(calc(var(--size) / 2));
+  //   }
+  // }
 }
 @mixin fadeOut {
   opacity: 0;

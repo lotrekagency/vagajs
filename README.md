@@ -110,6 +110,13 @@ Breakpoints are *md* (min-width: 992px) and *lg* (min-width: 1400px), here's ano
 `.vaga-move-right--lg`
 
 ---
+#### Unload util
+
+To unload animations after the element is no longer visible.
+
+`.vaga-unload`
+
+---
 #### Delay util classes
 
 Sometimes you want to have a bit of delay between animations, and for this issue VagaJS comes with a delay util:

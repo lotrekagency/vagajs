@@ -11,6 +11,8 @@ export function observingScroll(customOptions) {
       if (entry.isIntersecting) {
         //callback
         entry.target.classList.add('loaded')
+      } else if (!entry.isIntersecting && entry.target.classList.contains("loaded") && entry.target.classList.contains("vaga-unload")) {
+        entry.target?.classList.remove("loaded")
       }
     });
   },observerOptions);
