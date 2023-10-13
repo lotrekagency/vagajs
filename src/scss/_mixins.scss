@@ -1,11 +1,12 @@
 
 @mixin animationsBundle($opacity: false, $transform: false) {
   pointer-events: none;
+  
   &.loaded {
     pointer-events: initial;
     transition-property: opacity, transform;
     transition-duration: var(--duration);
-    transition-timing-function: var(--timing-function);
+    transition-timing-function: var(--timing-function-out);
     @if $opacity {
       opacity: 1;
     }
@@ -28,6 +29,7 @@
   //   pointer-events: none;
   //   transition-delay: 0s;
   //   opacity: 0;
+  //   transition-timing-function: var(--timing-function-in);
   //   @media (max-width:$mobile) {
   //     transform: translateY(calc(var(--size) / 2));
   //   }
